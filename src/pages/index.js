@@ -3,6 +3,7 @@ import { debounce } from 'lodash';
 
 import Layout from '../components/Layout';
 
+import lvwit from '../assets/images/lvwit.png';
 import pic1 from '../assets/images/pic01.jpg';
 import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.jpg';
@@ -29,7 +30,8 @@ const IndexPage = () => {
       <section id="banner">
         <div className="inner">
           <div className="logo">
-            <span className="icon fa-female"></span>
+            {/* <span className="icon fa-female"></span> */}
+            <img className="icon" src={lvwit} alt="LVWIT Logo" />
           </div>
           <h2>{config.heading}</h2>
           <p>{config.subHeading}</p>

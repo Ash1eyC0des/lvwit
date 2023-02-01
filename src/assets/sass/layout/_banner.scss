@@ -7,7 +7,7 @@
 /* Banner */
 
 #banner {
-  @include padding(10em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
+  @include padding(5em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
 
   .inner {
     margin: 0 auto;
@@ -18,20 +18,28 @@
     @include vendor('transition', ('opacity 2s ease', 'transform 1s ease'));
     @include vendor('transform', 'translateY(0)');
     opacity: 1;
-    margin: 0 0 (_size(element-margin) * 0.65) 0;
+    // margin: 0 0 (_size(element-margin) * 0.65) 0;
+
 
     .icon {
-      border-radius: 100%;
-      border: solid 2px _palette(border);
       cursor: default;
-      display: inline-block;
-      font-size: 2em;
-      height: 2.25em;
-      line-height: 2.25em;
-      text-align: center;
-      width: 2.25em;
+      display: block;
+      font-size: 6em;
+      width: 6em;
+      padding: 3%;
+      margin: 0 auto;
+    }
+
+    #logo {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
+
+
 
   h2 {
     @include vendor(
@@ -46,6 +54,7 @@
     font-size: 2.25em;
     margin-bottom: _size(element-margin) * 0.4;
     padding-bottom: _size(element-margin) * 0.2;
+    text-align: center;
   }
 
   p {
@@ -63,6 +72,13 @@
     letter-spacing: _font(kern-heading);
     line-height: 2;
     text-transform: uppercase;
+    text-align: center;
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
   }
 
   @include breakpoint('<=large') {

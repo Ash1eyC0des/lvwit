@@ -7,7 +7,7 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  heading: 'Lehigh Valley Women in IT',
+  heading: 'Lehigh Valley Women in Technology',
   subHeading:
     'A growing community of IT professionals who live or work in the Lehigh Valley  ',
   // social
