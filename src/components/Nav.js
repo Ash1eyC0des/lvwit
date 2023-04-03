@@ -22,7 +22,7 @@ export default function Nav({ onMenuToggle = () => {} }) {
               onClick={(e) => {
                 onMenuToggle();
               }}
-              to="/about"
+              to="/#one"
             >
               About
             </Link>
@@ -32,29 +32,30 @@ export default function Nav({ onMenuToggle = () => {} }) {
               onClick={(e) => {
                 onMenuToggle();
               }}
-              to="/join"
-            >
-              Join Us!
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={(e) => {
-                onMenuToggle();
-              }}
-              to="/resources"
-            >
-              Resources
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={(e) => {
-                onMenuToggle();
-              }}
               to="/events"
             >
-              Events
+              Upcoming Events
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              onClick={(e) => {
+                onMenuToggle();
+              }}
+              to="/"
+            >
+              Resources (Coming Soon!)
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={(e) => {
+                onMenuToggle();
+              }}
+              to="#footer"
+            >
+              Contact Us
             </Link>
           </li>
         </ul>

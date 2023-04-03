@@ -23,9 +23,25 @@ module.exports = {
     'gatsby-plugin-offline',
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: './src/pages/',
+      },
+      __key: 'pages',
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
+        name: `events`,
         path: `${__dirname}/events`,
       },
     },
