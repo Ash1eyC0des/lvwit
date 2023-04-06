@@ -36,7 +36,7 @@ module.exports = {
     {
       icon: 'fa-envelope-o',
       name: 'Email',
-      url: 'mailto:kellylmckain@gmail.com',
+      url: 'mailto:lehighvalleywit@gmail.com',
     },
   ],
   // phone: '000-00000',
