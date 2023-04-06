@@ -1,5 +1,7 @@
 import React from 'react';
 import config from '../../config';
+import chamber from '../assets/images/chamber.jpg';
+
 export default function Footer() {
   return (
     <section id="footer">
@@ -43,6 +45,16 @@ export default function Footer() {
               </li>
             );
           })}
+
+          <div id="chamber">
+            <a href="https://www.lehighvalleychamber.org/">
+              <img
+                src={chamber}
+                alt="Proud Member of the Greater Lehigh Valley Chamber of Commerce"
+                className="image main"
+              />
+            </a>
+          </div>
         </ul>
         <ul className="copyright">
           <li>&copy; 2023 LVWIT. All rights reserved.</li>

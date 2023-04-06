@@ -56,6 +56,12 @@
         }
       }
     }
+
+    #chamber {
+      margin-top: 40px;
+      padding: 10px;
+      max-width: 50%;
+    }
   }
 
   @include breakpoint('<=large') {

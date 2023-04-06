@@ -6,6 +6,8 @@ export default function EventIndexPage({ data }) {
   const { allMarkdownRemark } = data;
   const { nodes } = allMarkdownRemark;
 
+  console.log(data);
+
   return (
     <Layout fullMenu>
       <section id="wrapper">
