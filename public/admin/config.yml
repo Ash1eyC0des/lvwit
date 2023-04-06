@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  repo: Ash1eyC0des/lvwit
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: events
+    label: Events
+    folder: /events
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Event Date & Time, widget: datetime }
+      - { name: name, label: Event Name }
+      - { name: location, label: Event Location, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: rsvp, label: RSVP Required?, widget: boolean}
+      - { name: details, label: Event Details, widget: markdown }

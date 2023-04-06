@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "lvwit.org",
+  "Id": "d45a3179-e098-457b-ad45-58866ab621a6"
+}
