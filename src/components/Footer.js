@@ -3,6 +3,19 @@ import config from '../../config';
 import chamber from '../assets/images/chamber.jpg';
 
 export default function Footer() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    }).catch((error) => alert(error));
+  };
+
   return (
     <section id="footer">
       <div className="inner">
@@ -11,7 +24,13 @@ export default function Footer() {
           Questions / Comments? Please send us a message below and we'll get
           back to you as soon as possible.
         </p>
-        <form name="contact" method="post" data-netlify="true">
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          onSubmit={handleSubmit}
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="fields">
             <div className="field">
               <label htmlFor="name">Name</label>
