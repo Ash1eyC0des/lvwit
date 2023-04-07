@@ -11,7 +11,7 @@ export default function Footer() {
           Questions / Comments? Please send us a message below and we'll get
           back to you as soon as possible.
         </p>
-        <form method="post" action="/#">
+        <form name="contact" method="post" data-netlify="true">
           <div className="fields">
             <div className="field">
               <label htmlFor="name">Name</label>
