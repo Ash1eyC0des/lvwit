@@ -1,5 +1,4 @@
 ---
-path: /test
 date: 2023-04-07T02:17:11.780Z
 name: Test Event 1
 location: TBD

@@ -12,7 +12,6 @@ collections:
     folder: /events
     create: true
     fields:
-      - { name: path, label: Path }
       - { name: date, label: Event Date & Time, widget: datetime }
       - { name: name, label: Event Name }
       - { name: location, label: Event Location, widget: text }
