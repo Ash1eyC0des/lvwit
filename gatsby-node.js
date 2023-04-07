@@ -3,8 +3,9 @@ const moment = require('moment');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = function ({ graphql, actions }) {
-  const yesterday = moment().subtract(1, 'days').format('YYYY-DD-MM');
+  const yesterday = moment().subtract(1, 'days').format('YYYY-MM-DD');
   const { createPage } = actions;
+
   return graphql(
     `
       query loadEventPagesQuery($limit: Int!) {
@@ -17,7 +18,7 @@ exports.createPages = function ({ graphql, actions }) {
         }
       }
     `,
-    { limit: 50 }
+    { limit: 10 }
   ).then((result) => {
     if (result.errors) {
       throw result.errors;

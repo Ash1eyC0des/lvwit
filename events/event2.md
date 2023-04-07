@@ -1,9 +1,9 @@
 ---
-date: "2023-04-15"
-name: "Cyber Security Presentation"
-location: "Premise Maid Chocolates"
+date: "2023-04-01"
+name: "Test Event 2"
+location: "Nowhere"
 image: \images\towfiqu-barbhuiya-FnA5pAzqhMM-unsplash.jpg
 rsvp: true
 
 ---
-Blah Blah Blah...
+Join us for food, drinks, and networking!

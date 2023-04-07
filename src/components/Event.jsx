@@ -9,6 +9,8 @@ export default function BlogPostTemplate({
   const { nodes } = allMarkdownRemark;
   const { frontmatter, html } = markdownRemark;
 
+  console.log(nodes, frontmatter);
+
   return (
     <Layout fullMenu>
       <section id="wrapper">
@@ -39,8 +41,11 @@ export default function BlogPostTemplate({
 
         <div className="wrapper alt style1">
           <div className="inner">
-            <h2 class="major">Other Events</h2>
+            <h2 className="major">Other Events</h2>
             <section className="features">
+              {nodes.length === 0 && (
+                <p>No other events currently scheduled. Check back soon!</p>
+              )}
               {nodes &&
                 nodes.map((node) => {
                   return (
@@ -84,8 +89,8 @@ export const pageQuery = graphql`
   query ($slug: String!, $yesterday: Date!) {
     allMarkdownRemark(
       filter: {
-        frontmatter: { date: { gte: $yesterday } }
         fields: { slug: { ne: $slug } }
+        frontmatter: { date: { gt: $yesterday } }
       }
       sort: { frontmatter: { date: ASC } }
       limit: 2

@@ -6,7 +6,7 @@ export default function EventIndexPage({ data }) {
   const { allMarkdownRemark } = data;
   const { nodes } = allMarkdownRemark;
 
-  console.log(data);
+  console.log(nodes);
 
   return (
     <Layout fullMenu>
@@ -21,6 +21,9 @@ export default function EventIndexPage({ data }) {
         <div className="wrapper">
           <div className="inner">
             <section className="features">
+              {nodes.length === 0 && (
+                <h3>No events currently scheduled. Please check back soon!</h3>
+              )}
               {nodes &&
                 nodes.map((node) => {
                   return (
@@ -35,7 +38,10 @@ export default function EventIndexPage({ data }) {
                       <p>
                         <strong>Location:</strong> {node.frontmatter.location}
                       </p>
-                      <a href={node.fields.slug} className="special">
+                      <a
+                        href={`../events${node.fields.slug}`}
+                        className="special"
+                      >
                         Details
                       </a>
                     </article>
@@ -52,7 +58,7 @@ export default function EventIndexPage({ data }) {
 export const pageQuery = graphql`
   query ($yesterday: Date!) {
     allMarkdownRemark(
-      filter: { frontmatter: { date: { gte: $yesterday } } }
+      filter: { frontmatter: { date: { gt: $yesterday } } }
       sort: { frontmatter: { date: ASC } }
     ) {
       nodes {
