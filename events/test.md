@@ -1,8 +1,9 @@
 ---
-date: 2023-04-21T22:00:00.000Z
-name: Test Event 1
-location: TBD
-image: /images/brooke-cagle-7wmfmaijjyg-unsplash.jpg
+date: 2023-09-21T22:00:00.000Z
+name: Fall Happy Hour
+location: Sorrenti Family Estate
+image: /images/screenshot-2023-08-18-105635.png
 rsvp: true
-details: T﻿his is a test event.
+details: J﻿oin us for our first fall event at Sorrenti Family Estate for some
+  Conversation, Wine and Pizza!
 ---
